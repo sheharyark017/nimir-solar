@@ -8,7 +8,7 @@ const navHeight = nav.clientHeight;
 
 // phone navbar
 
-navLinks.style.top = navHeight - 30 + "px";
+navLinks.style.top = navHeight + "px";
 
 hamburger.addEventListener("click", function () {
   this.classList.toggle("hamburger-active");
