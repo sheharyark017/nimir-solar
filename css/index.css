@@ -1,0 +1,79 @@
+.solar-form {
+  background: url("../images/Lead-Form.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 80px;
+}
+
+.solar-form-top {
+  margin-bottom: 40px;
+}
+
+.solar-form-top p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.solar-form-top p.a {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.solar-form-top .divider {
+  height: 4px;
+  width: 10%;
+  border-radius: 99px;
+  background-color: #4894c6;
+  margin-bottom: 15px;
+}
+
+.solar-form form .inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.solar-form form .inputs .input {
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 31%;
+}
+
+.solar-form form .inputs .input input,
+.solar-form form .inputs .input select {
+  width: 100%;
+  padding: 9px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+.solar-form .form-btn button {
+  width: 100%;
+  padding: 9px;
+  background-color: #4894c6;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 980px) {
+  .solar-form {
+    padding: 40px 20px;
+  }
+
+  .solar-form-top p.a {
+    font-size: 18px;
+  }
+
+  .solar-form-top .divider {
+    width: 20%;
+  }
+
+  .solar-form form .inputs .input {
+    width: 100%;
+  }
+}

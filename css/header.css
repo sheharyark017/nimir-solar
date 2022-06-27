@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+:root {
+  --main: #132258;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.inner-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+nav {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar-top {
+  background-color: #fafafa;
+  padding: 0 6%;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: 52px;
+  right: 75px;
+  text-align: left;
+  z-index: 99;
+  background-color: #fff;
+  display: none;
+  border: 1px solid #ccc;
+  width: 150px;
+  font-size: 17px;
+  color: #6b6b6b;
+  box-shadow: 0 0 4px 0 rgb(153, 153, 153);
+}
+
+.account-dropdown li {
+  margin: 0 !important;
+}
+
+.account:hover .account-dropdown {
+  display: block;
+}
+
+.account-dropdown ul {
+  padding: 0;
+  margin: 0;
+}
+.account-dropdown ul li {
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+}
+
+.account-dropdown ul li:hover {
+  background-color: #f1f1f1;
+}
+
+.account-dropdown ul li:last-child {
+  border: none;
+}
+
+.account-dropdown ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+}
+
+.account-dropdown ul li a:hover {
+  color: #000;
+}
+
+.navbar-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 4%;
+}
+
+.navbar-bottom a {
+  font-size: 15px;
+}
+
+.navbar-bottom a:hover::before {
+  content: "";
+  height: 10px;
+  width: 100%;
+  background-color: #000;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 28px;
+  background-color: #000;
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  border-radius: 99px;
+  transition: 0.3s linear;
+}
+
+.hamburger-active span:nth-child(1) {
+  transform: rotate(45deg) translatex(5px);
+}
+.hamburger-active span:nth-child(2) {
+  display: none;
+}
+.hamburger-active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px);
+}
+
+.navbar-bottom .logo img {
+  height: 45px;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.nav-links {
+  margin-right: 20px;
+}
+
+.nav-links ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.account ul {
+  display: block;
+}
+
+.nav-links ul li,
+.nav-links ul span {
+  list-style: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.nav-links ul li.signup {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .nav-links {
+    position: absolute;
+    margin-top: 30px;
+    z-index: 999;
+    background-color: #f0f0f0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+    left: 0;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #dadada;
+    padding: 8px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li.signup {
+    display: block;
+  }
+
+  .nav-links ul .account {
+    display: none;
+  }
+
+  .nav-links-acive {
+    max-height: 350px;
+    padding: 10px 0 0;
+  }
+}
